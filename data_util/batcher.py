@@ -6,7 +6,10 @@ from random import shuffle
 from threading import Thread
 
 import numpy as np
-import tensorflow as tf
+#import tensorflow as tf
+# use tensorflow 1.x
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior
 
 from . import config
 from . import data
