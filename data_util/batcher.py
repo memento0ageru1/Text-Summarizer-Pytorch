@@ -284,3 +284,5 @@ class Batcher(object):
         continue
       else:
         yield (article_text, abstract_text)
+      except StopIteration:
+        return
