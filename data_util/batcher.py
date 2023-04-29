@@ -283,6 +283,7 @@ class Batcher(object):
         #tf.logging.warning('Found an example with empty article text. Skipping it.')
         continue
       else:
-        yield (article_text, abstract_text)
-      except StopIteration:
-        return
+        try:
+          yield (article_text, abstract_text)
+        except StopIteration:
+          return
